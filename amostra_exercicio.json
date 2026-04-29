@@ -1,0 +1,34 @@
+{
+  "negocio": {
+    "nome": "Loja Games Realista",
+    "segmento": "Varejo de Jogos",
+    "cidade": "São Caetano do Sul"
+  },
+  "dados": {
+    "transacoes": [
+      {"id": "R001", "data": "2026-04-01", "tipo": "receita", "produto": "EA Sports FC 24 (PS5)", "valor": 299.90, "forma_pagamento": "pix", "desconto": 0.0},
+      {"id": "R002", "data": "2026-04-01", "tipo": "receita", "produto": "Call of Duty: Modern Warfare III", "valor": 349.90, "forma_pagamento": "cartao", "desconto": 30.0},
+      
+      {"id": "R003", "data": "2026-04-02", "tipo": "receita", "produto": "GTA V (PS4)", "valor": 119.90, "forma_pagamento": "pix", "desconto": 0.0},
+      {"id": "R004", "data": "2026-04-02", "tipo": "receita", "produto": "Red Dead Redemption 2", "valor": 149.90, "forma_pagamento": "boleto", "desconto": 20.0},
+      
+      {"id": "R005", "data": "2026-04-03", "tipo": "receita", "produto": "The Last of Us Part II", "valor": 199.90, "forma_pagamento": "pix", "desconto": 10.0},
+      {"id": "R006", "data": "2026-04-03", "tipo": "receita", "produto": "Marvel's Spider-Man 2", "valor": 349.90, "forma_pagamento": "pix", "desconto": 0.0},
+      
+      {"id": "R007", "data": "2026-04-04", "tipo": "receita", "produto": "Elden Ring", "valor": 249.90, "forma_pagamento": "cartao", "desconto": 25.0},
+      {"id": "R008", "data": "2026-04-04", "tipo": "receita", "produto": "Hogwarts Legacy", "valor": 229.90, "forma_pagamento": "pix", "desconto": 0.0},
+      
+      {"id": "R009", "data": "2026-04-05", "tipo": "receita", "produto": "Minecraft (Java Edition)", "valor": 99.90, "forma_pagamento": "pix", "desconto": 0.0},
+      {"id": "R010", "data": "2026-04-05", "tipo": "receita", "produto": "Fortnite - 1000 V-Bucks", "valor": 39.90, "forma_pagamento": "pix", "desconto": 0.0},
+      
+      {"id": "R011", "data": "2026-04-06", "tipo": "receita", "produto": "God of War Ragnarök", "valor": 279.90, "forma_pagamento": "cartao", "desconto": 20.0},
+      {"id": "R012", "data": "2026-04-06", "tipo": "receita", "produto": "Gran Turismo 7", "valor": 249.90, "forma_pagamento": "boleto", "desconto": 15.0},
+      
+      {"id": "R013", "data": "2026-04-07", "tipo": "receita", "produto": "Cyberpunk 2077", "valor": 159.90, "forma_pagamento": "pix", "desconto": 30.0},
+      {"id": "R014", "data": "2026-04-07", "tipo": "receita", "produto": "Assassin’s Creed Mirage", "valor": 219.90, "forma_pagamento": "pix", "desconto": 0.0},
+      
+      {"id": "R015", "data": "2026-04-08", "tipo": "receita", "produto": "NBA 2K24", "valor": 299.90, "forma_pagamento": "cartao", "desconto": 40.0},
+      {"id": "R016", "data": "2026-04-08", "tipo": "receita", "produto": "Resident Evil 4 Remake", "valor": 239.90, "forma_pagamento": "pix", "desconto": 0.0}
+    ]
+  }
+}
