@@ -1,0 +1,125 @@
+{
+  "tema": "Organizar os dados para entender distribuição e faixas de desempenho",
+  "problema_financeiro": "O empreendedor vê números soltos, mas não enxerga faixas de valor, frequência ou concentração.",
+  "calculos": {
+    "tabela_frequencia_categoria": [
+      {
+        "valor": "Venda",
+        "frequencia": 12,
+        "percentual": 50.0
+      },
+      {
+        "valor": "Estoque",
+        "frequencia": 5,
+        "percentual": 20.83
+      },
+      {
+        "valor": "Frete",
+        "frequencia": 2,
+        "percentual": 8.33
+      },
+      {
+        "valor": "Marketing",
+        "frequencia": 1,
+        "percentual": 4.17
+      },
+      {
+        "valor": "Aluguel",
+        "frequencia": 1,
+        "percentual": 4.17
+      },
+      {
+        "valor": "Imposto",
+        "frequencia": 1,
+        "percentual": 4.17
+      },
+      {
+        "valor": "Energia",
+        "frequencia": 1,
+        "percentual": 4.17
+      },
+      {
+        "valor": "Comissao",
+        "frequencia": 1,
+        "percentual": 4.17
+      }
+    ],
+    "tabela_frequencia_forma_pagamento": [
+      {
+        "valor": "pix",
+        "frequencia": 12,
+        "percentual": 50.0
+      },
+      {
+        "valor": "boleto",
+        "frequencia": 9,
+        "percentual": 37.5
+      },
+      {
+        "valor": "cartao",
+        "frequencia": 3,
+        "percentual": 12.5
+      }
+    ],
+    "tabela_contingencia_categoria_pagamento": {
+      "Venda": {
+        "pix": 6,
+        "cartao": 3,
+        "boleto": 3
+      },
+      "Estoque": {
+        "boleto": 5
+      },
+      "Marketing": {
+        "pix": 1
+      },
+      "Frete": {
+        "pix": 2
+      },
+      "Aluguel": {
+        "boleto": 1
+      },
+      "Imposto": {
+        "pix": 1
+      },
+      "Energia": {
+        "pix": 1
+      },
+      "Comissao": {
+        "pix": 1
+      }
+    },
+    "quartis_receita_diaria": {
+      "q1": 276.5,
+      "q2_mediana": 430.0,
+      "q3": 632.545
+    },
+    "quartis_lucro_diario": {
+      "q1": 194.25,
+      "q2_mediana": 317.25,
+      "q3": 447.515
+    },
+    "decis_ticket": {
+      "d1": 161.6,
+      "d2": 268.8,
+      "d3": 292.15,
+      "d4": 356.3,
+      "d5": 430.0,
+      "d6": 492.0,
+      "d7": 583.042,
+      "d8": 682.012,
+      "d9": 817.0
+    },
+    "percentis_ticket": {
+      "p10": 161.6,
+      "p25": 276.5,
+      "p50": 430.0,
+      "p75": 632.545,
+      "p90": 817.0
+    }
+  },
+  "insights": [
+    "As tabelas ajudam a descobrir onde há maior concentração de receitas, despesas e formas de pagamento.",
+    "Quartis, decis e percentis permitem segmentar clientes, tickets e períodos do negócio."
+  ]
+}
