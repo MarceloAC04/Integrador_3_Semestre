@@ -1,0 +1,29 @@
+{
+  "tema": "Modelar cenários financeiros com distribuições probabilísticas",
+  "problema_financeiro": "O empreendedor quer escolher o modelo probabilístico mais adequado ao comportamento do negócio.",
+  "calculos": {
+    "comparacao_modelos_discretos": {
+      "poisson": -12.0,
+      "binomial": null,
+      "bernoulli": null
+    },
+    "modelo_discreto_mais_apropriado": {
+      "nome": "poisson",
+      "score_loglik": -12.0
+    },
+    "comparacao_modelos_continuos": {
+      "gaussiana": -87.4538,
+      "exponencial": -89.4597,
+      "uniforme": -86.5056
+    },
+    "modelo_continuo_mais_apropriado": {
+      "nome": "uniforme",
+      "score_loglik": -86.5056
+    },
+    "criterio": "O modelo com maior log-verossimilhança é tratado como o mais aderente aos dados observados."
+  },
+  "insights": [
+    "Esta etapa compara modelos para escolher o mais coerente com contagens e valores do negócio.",
+    "O resultado serve como base para simulações e projeções futuras."
+  ]
+}

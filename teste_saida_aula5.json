@@ -1,0 +1,24 @@
+{
+  "tema": "Trabalhar incerteza e risco financeiro",
+  "problema_financeiro": "O empreendedor precisa decidir mesmo sem garantias, medindo chance e risco.",
+  "calculos": {
+    "espaco_amostral_dias": 12,
+    "eventos_observados": {
+      "dias_com_venda": 12,
+      "dias_com_lucro_negativo": 4,
+      "pagamentos_em_atraso": 4
+    },
+    "probabilidade_empirica_atraso_pagamento": 0.1667,
+    "probabilidade_empirica_lucro_negativo": 0.3333,
+    "probabilidade_empirica_dia_com_venda": 1.0,
+    "explicacao": {
+      "classica": "Depende de eventos equiprováveis previamente definidos.",
+      "empirica": "Calculada a partir da frequência observada nos dados do negócio.",
+      "subjetiva": "Pode ser adicionada pelo especialista do negócio como expectativa gerencial."
+    }
+  },
+  "insights": [
+    "Aqui o sistema deixa de ser apenas descritivo e começa a lidar com risco financeiro.",
+    "As probabilidades empíricas ajudam na tomada de decisão sob incerteza."
+  ]
+}
