@@ -1,0 +1,695 @@
+{
+  "sistema": "Insight Calculado",
+  "versao": "1.0",
+  "negocio": {
+    "nome": "Loja Exemplo do Empreendedor",
+    "segmento": "Varejo",
+    "cidade": "São Caetano do Sul"
+  },
+  "recepcao": {
+    "origem": "formulario_web",
+    "observacao": "Exemplo didático para evolução do Insight Calculado aula a aula"
+  },
+  "resumo_processamento": {
+    "qtd_transacoes_recebidas": 24,
+    "qtd_registros_diarios": 12,
+    "campos_observados_transacoes": [
+      "categoria",
+      "cliente",
+      "data",
+      "desconto",
+      "forma_pagamento",
+      "id",
+      "marketing",
+      "pago_no_prazo",
+      "tipo",
+      "valor"
+    ],
+    "campos_observados_dias": [
+      "clientes",
+      "data",
+      "desconto_medio",
+      "despesa",
+      "marketing",
+      "receita",
+      "transacoes_qtd",
+      "vendas_qtd"
+    ]
+  },
+  "aula_1": {
+    "tema": "Entender os dados do negócio",
+    "problema_financeiro": "O empreendedor possui dados, mas não sabe o que está registrando nem como organizar isso para análise.",
+    "calculos": {
+      "populacao_transacoes": 24,
+      "populacao_registros_diarios": 12,
+      "amostra_exibida": 5,
+      "classificacao_campos_transacoes": {
+        "categoria": "qualitativa_nominal",
+        "cliente": "qualitativa_nominal",
+        "data": "qualitativa_nominal",
+        "desconto": "quantitativa_discreta",
+        "forma_pagamento": "qualitativa_nominal",
+        "id": "qualitativa_ordinal_ou_textual",
+        "marketing": "quantitativa_continua",
+        "pago_no_prazo": "quantitativa_discreta",
+        "tipo": "qualitativa_nominal",
+        "valor": "quantitativa_continua"
+      },
+      "campos_faltantes_transacoes": {},
+      "campos_faltantes_dias": {},
+      "amostra_transacoes": [
+        {
+          "id": "T001",
+          "data": "2026-04-01",
+          "tipo": "receita",
+          "categoria": "Venda",
+          "valor": 325.5,
+          "cliente": "Cliente A",
+          "forma_pagamento": "pix",
+          "pago_no_prazo": true,
+          "desconto": 7.0,
+          "marketing": 25.0
+        },
+        {
+          "id": "T002",
+          "data": "2026-04-01",
+          "tipo": "despesa",
+          "categoria": "Estoque",
+          "valor": 120.3,
+          "forma_pagamento": "boleto",
+          "pago_no_prazo": true,
+          "desconto": 2.78,
+          "marketing": 0.0
+        },
+        {
+          "id": "T003",
+          "data": "2026-04-02",
+          "tipo": "receita",
+          "categoria": "Venda",
+          "valor": 149.0,
+          "cliente": "Cliente B",
+          "forma_pagamento": "cartao",
+          "pago_no_prazo": true,
+          "desconto": 10.0,
+          "marketing": 30.0
+        },
+        {
+          "id": "T004",
+          "data": "2026-04-02",
+          "tipo": "despesa",
+          "categoria": "Marketing",
+          "valor": 880.7,
+          "forma_pagamento": "pix",
+          "pago_no_prazo": true,
+          "desconto": 8.7,
+          "marketing": 0.0
+        },
+        {
+          "id": "T005",
+          "data": "2026-04-03",
+          "tipo": "receita",
+          "categoria": "Venda",
+          "valor": 450.22,
+          "cliente": "Cliente C",
+          "forma_pagamento": "pix",
+          "pago_no_prazo": true,
+          "desconto": 5.0,
+          "marketing": 40.0
+        }
+      ]
+    },
+    "insights": [
+      "Nesta etapa o sistema identifica quais campos são qualitativos e quais são quantitativos.",
+      "Também aponta lacunas iniciais para preparar a análise exploratória das próximas aulas."
+    ]
+  },
+  "aula_2": {
+    "tema": "Descobrir o comportamento financeiro central do negócio",
+    "problema_financeiro": "O empreendedor não sabe qual é o comportamento financeiro típico do negócio.",
+    "calculos": {
+      "receita_diaria": {
+        "media": 635.8558,
+        "mediana": 598.03,
+        "moda": 325.5,
+        "amplitude": 1351.27,
+        "variancia": 136091.6141,
+        "desvio_padrao": 368.906,
+        "minimo": 149.0,
+        "maximo": 1500.27
+      },
+      "despesa_diaria": {
+        "media": 752.4983,
+        "mediana": 330.125,
+        "moda": 120.3,
+        "amplitude": 4151.0,
+        "variancia": 1307388.4353,
+        "desvio_padrao": 1143.4109,
+        "minimo": 89.0,
+        "maximo": 4240.0
+      },
+      "lucro_diario": {
+        "media": -116.6425,
+        "mediana": 259.88,
+        "moda": 205.2,
+        "amplitude": 4253.94,
+        "variancia": 1369595.7405,
+        "desvio_padrao": 1170.2973,
+        "minimo": -3623.94,
+        "maximo": 630.0
+      },
+      "ticket_receita": {
+        "media": 635.8558,
+        "mediana": 598.03,
+        "moda": 325.5,
+        "amplitude": 1351.27,
+        "variancia": 136091.6141,
+        "desvio_padrao": 368.906,
+        "minimo": 149.0,
+        "maximo": 1500.27
+      }
+    },
+    "insights": [
+      "A média mostra o comportamento central, enquanto mediana e moda ajudam a validar se há distorções.",
+      "A variância e o desvio padrão ajudam a medir estabilidade financeira."
+    ]
+  },
+  "aula_3": {
+    "tema": "Organizar os dados para entender distribuição e faixas de desempenho",
+    "problema_financeiro": "O empreendedor vê números soltos, mas não enxerga faixas de valor, frequência ou concentração.",
+    "calculos": {
+      "tabela_frequencia_categoria": [
+        {
+          "valor": "Venda",
+          "frequencia": 12,
+          "percentual": 50.0
+        },
+        {
+          "valor": "Estoque",
+          "frequencia": 5,
+          "percentual": 20.83
+        },
+        {
+          "valor": "Frete",
+          "frequencia": 2,
+          "percentual": 8.33
+        },
+        {
+          "valor": "Marketing",
+          "frequencia": 1,
+          "percentual": 4.17
+        },
+        {
+          "valor": "Aluguel",
+          "frequencia": 1,
+          "percentual": 4.17
+        },
+        {
+          "valor": "Imposto",
+          "frequencia": 1,
+          "percentual": 4.17
+        },
+        {
+          "valor": "Energia",
+          "frequencia": 1,
+          "percentual": 4.17
+        },
+        {
+          "valor": "Comissao",
+          "frequencia": 1,
+          "percentual": 4.17
+        }
+      ],
+      "tabela_frequencia_forma_pagamento": [
+        {
+          "valor": "pix",
+          "frequencia": 12,
+          "percentual": 50.0
+        },
+        {
+          "valor": "boleto",
+          "frequencia": 9,
+          "percentual": 37.5
+        },
+        {
+          "valor": "cartao",
+          "frequencia": 3,
+          "percentual": 12.5
+        }
+      ],
+      "tabela_contingencia_categoria_pagamento": {
+        "Venda": {
+          "pix": 6,
+          "cartao": 3,
+          "boleto": 3
+        },
+        "Estoque": {
+          "boleto": 5
+        },
+        "Marketing": {
+          "pix": 1
+        },
+        "Frete": {
+          "pix": 2
+        },
+        "Aluguel": {
+          "boleto": 1
+        },
+        "Imposto": {
+          "pix": 1
+        },
+        "Energia": {
+          "pix": 1
+        },
+        "Comissao": {
+          "pix": 1
+        }
+      },
+      "quartis_receita_diaria": {
+        "q1": 388.875,
+        "q2_mediana": 598.03,
+        "q3": 814.015
+      },
+      "quartis_lucro_diario": {
+        "q1": -115.825,
+        "q2_mediana": 259.88,
+        "q3": 470.64
+      },
+      "decis_ticket": {
+        "d1": 271.95,
+        "d2": 342.4,
+        "d3": 422.066,
+        "d4": 502.132,
+        "d5": 598.03,
+        "d6": 679.12,
+        "d7": 784.748,
+        "d8": 818.448,
+        "d9": 964.006
+      },
+      "percentis_ticket": {
+        "p10": 271.95,
+        "p25": 388.875,
+        "p50": 598.03,
+        "p75": 814.015,
+        "p90": 964.006
+      }
+    },
+    "insights": [
+      "As tabelas ajudam a descobrir onde há maior concentração de receitas, despesas e formas de pagamento.",
+      "Quartis, decis e percentis permitem segmentar clientes, tickets e períodos do negócio."
+    ]
+  },
+  "aula_4": {
+    "tema": "Entender o que influencia o resultado financeiro",
+    "problema_financeiro": "O empreendedor quer saber o que parece impactar faturamento, lucro ou estabilidade.",
+    "calculos": {
+      "correlacoes": {
+        "marketing_x_receita": 0.1704,
+        "marketing_x_lucro": -0.0936,
+        "desconto_x_receita": -0.0183,
+        "clientes_x_receita": null,
+        "vendas_qtd_x_receita": null,
+        "despesa_x_lucro": -0.9494
+      },
+      "relacao_mais_forte": {
+        "par": "despesa_x_lucro",
+        "correlacao": -0.9494
+      },
+      "nota_causalidade": "Correlação não prova causalidade; os resultados indicam associação estatística e devem ser validados no contexto do negócio."
+    },
+    "insights": [
+      "Esta etapa ajuda a entender o que se move junto com receita ou lucro.",
+      "Ela não substitui análise causal, mas orienta testes e decisões do projeto."
+    ]
+  },
+  "aula_5": {
+    "tema": "Trabalhar incerteza e risco financeiro",
+    "problema_financeiro": "O empreendedor precisa decidir mesmo sem garantias, medindo chance e risco.",
+    "calculos": {
+      "espaco_amostral_dias": 12,
+      "eventos_observados": {
+        "dias_com_venda": 12,
+        "dias_com_lucro_negativo": 4,
+        "pagamentos_em_atraso": 4
+      },
+      "probabilidade_empirica_atraso_pagamento": 0.1667,
+      "probabilidade_empirica_lucro_negativo": 0.3333,
+      "probabilidade_empirica_dia_com_venda": 1.0,
+      "explicacao": {
+        "classica": "Depende de eventos equiprováveis previamente definidos.",
+        "empirica": "Calculada a partir da frequência observada nos dados do negócio.",
+        "subjetiva": "Pode ser adicionada pelo especialista do negócio como expectativa gerencial."
+      }
+    },
+    "insights": [
+      "Aqui o sistema deixa de ser apenas descritivo e começa a lidar com risco financeiro.",
+      "As probabilidades empíricas ajudam na tomada de decisão sob incerteza."
+    ]
+  },
+  "aula_6": {
+    "tema": "Modelar cenários financeiros com distribuições probabilísticas",
+    "problema_financeiro": "O empreendedor quer escolher o modelo probabilístico mais adequado ao comportamento do negócio.",
+    "calculos": {
+      "comparacao_modelos_discretos": {
+        "poisson": -12.0,
+        "binomial": null,
+        "bernoulli": null
+      },
+      "modelo_discreto_mais_apropriado": {
+        "nome": "poisson",
+        "score_loglik": -12.0
+      },
+      "comparacao_modelos_continuos": {
+        "gaussiana": -87.4538,
+        "exponencial": -89.4597,
+        "uniforme": -86.5056
+      },
+      "modelo_continuo_mais_apropriado": {
+        "nome": "uniforme",
+        "score_loglik": -86.5056
+      },
+      "criterio": "O modelo com maior log-verossimilhança é tratado como o mais aderente aos dados observados."
+    },
+    "insights": [
+      "Esta etapa compara modelos para escolher o mais coerente com contagens e valores do negócio.",
+      "O resultado serve como base para simulações e projeções futuras."
+    ]
+  },
+  "aula_7": {
+    "tema": "Preparar dados reais para gerar insights confiáveis",
+    "problema_financeiro": "Os dados reais chegam com ruídos, lacunas e escalas diferentes, o que compromete a análise.",
+    "calculos": {
+      "lacunas_transacoes": {},
+      "outliers_ticket": {
+        "q1": 388.875,
+        "q3": 814.015,
+        "iqr": 425.14,
+        "limite_inferior": -248.83500000000004,
+        "limite_superior": 1451.725,
+        "indices_outliers": [
+          3
+        ],
+        "valores_outliers": [
+          1500.27
+        ]
+      },
+      "outliers_lucro": {
+        "q1": -115.82500000000002,
+        "q3": 470.64,
+        "iqr": 586.465,
+        "limite_inferior": -995.5225,
+        "limite_superior": 1350.3375,
+        "indices_outliers": [
+          5
+        ],
+        "valores_outliers": [
+          -3623.94
+        ]
+      },
+      "normalizacao_receita_preview": [
+        0.1306,
+        0.0,
+        0.2229,
+        1.0,
+        0.319,
+        0.3456,
+        0.4966,
+        0.4234,
+        0.1932,
+        0.4906
+      ],
+      "padronizacao_receita_preview": [
+        -0.8413,
+        -1.3197,
+        -0.5032,
+        2.3432,
+        -0.1514,
+        -0.0537,
+        0.4993,
+        0.2312,
+        -0.6122,
+        0.4775
+      ],
+      "normalizacao_lucro_preview": [
+        0.9001,
+        0.6799,
+        0.8067,
+        0.993,
+        0.9341,
+        0.0,
+        0.8307,
+        0.9601,
+        0.9258,
+        0.9699
+      ],
+      "padronizacao_lucro_preview": [
+        0.275,
+        -0.5256,
+        -0.0646,
+        0.6126,
+        0.3983,
+        -2.9969,
+        0.0225,
+        0.493,
+        0.3685,
+        0.5284
+      ],
+      "selecao_de_recursos_por_correlacao": {
+        "correlacoes_com_lucro": {
+          "clientes": null,
+          "marketing": -0.0936,
+          "desconto_medio": -0.8372,
+          "vendas_qtd": null,
+          "despesa": -0.9494
+        },
+        "atributos_selecionados": [
+          "desconto_medio",
+          "despesa"
+        ]
+      },
+      "tlc_nota": "Com amostras suficientemente grandes, a distribuição da média amostral tende à normalidade."
+    },
+    "insights": [
+      "Esta fase limpa a base e prepara os dados para análises mais confiáveis.",
+      "Também indica quais variáveis parecem mais úteis para prever ou explicar o lucro."
+    ]
+  },
+  "aula_8": {
+    "tema": "Detectar anomalias e apresentar insights visuais para decisão",
+    "problema_financeiro": "O empreendedor precisa receber resultados claros, acionáveis e prontos para decisão.",
+    "calculos": {
+      "kpis_finais": {
+        "receita_total": 7630.27,
+        "despesa_total": 9029.98,
+        "lucro_total": -1399.71,
+        "margem_lucro": -0.1834,
+        "ticket_medio": 635.8558,
+        "probabilidade_atraso_pagamento": 0.1667,
+        "probabilidade_lucro_negativo": 0.3333
+      },
+      "alertas": [
+        "Margem de lucro baixa para o período analisado.",
+        "Há risco relevante de dias com lucro negativo.",
+        "Foram detectados outliers no lucro diário; convém investigar eventos excepcionais."
+      ],
+      "top_categorias": [
+        {
+          "valor": "Venda",
+          "frequencia": 12,
+          "percentual": 50.0
+        },
+        {
+          "valor": "Estoque",
+          "frequencia": 5,
+          "percentual": 20.83
+        },
+        {
+          "valor": "Frete",
+          "frequencia": 2,
+          "percentual": 8.33
+        },
+        {
+          "valor": "Marketing",
+          "frequencia": 1,
+          "percentual": 4.17
+        },
+        {
+          "valor": "Aluguel",
+          "frequencia": 1,
+          "percentual": 4.17
+        }
+      ],
+      "dados_prontos_para_graficos": {
+        "receita_diaria": [
+          325.5,
+          149.0,
+          450.22,
+          1500.27,
+          580.0,
+          616.06,
+          820.06,
+          721.16,
+          410.0,
+          812.0,
+          266.0,
+          980.0
+        ],
+        "despesa_diaria": [
+          120.3,
+          880.7,
+          642.5,
+          900.0,
+          230.5,
+          4240.0,
+          910.4,
+          260.89,
+          95.44,
+          310.25,
+          89.0,
+          350.0
+        ],
+        "lucro_diario": [
+          205.2,
+          -731.7,
+          -192.28,
+          600.27,
+          349.5,
+          -3623.94,
+          -90.34,
+          460.27,
+          314.56,
+          501.75,
+          177.0,
+          630.0
+        ],
+        "vendas_qtd_diaria": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "normas_e_legislacao_nota": "Os resultados devem ser utilizados respeitando privacidade, finalidade dos dados, transparência analítica e normas vigentes aplicáveis ao contexto do negócio."
+    },
+    "insights": [
+      "Receita total do período: R$ 7630.27",
+      "Despesa total do período: R$ 9029.98",
+      "Lucro total do período: R$ -1399.71",
+      "Ticket médio: R$ 635.86",
+      "Melhor modelo discreto observado: poisson.",
+      "Melhor modelo contínuo observado: uniforme."
+    ]
+  },
+  "modulo_final": {
+    "descricao": "Módulo consolidado que recebe dados do empreendedor e retorna os cálculos aplicados ao longo das 8 aulas.",
+    "saida_principal": {
+      "kpis_finais": {
+        "receita_total": 7630.27,
+        "despesa_total": 9029.98,
+        "lucro_total": -1399.71,
+        "margem_lucro": -0.1834,
+        "ticket_medio": 635.8558,
+        "probabilidade_atraso_pagamento": 0.1667,
+        "probabilidade_lucro_negativo": 0.3333
+      },
+      "alertas": [
+        "Margem de lucro baixa para o período analisado.",
+        "Há risco relevante de dias com lucro negativo.",
+        "Foram detectados outliers no lucro diário; convém investigar eventos excepcionais."
+      ],
+      "top_categorias": [
+        {
+          "valor": "Venda",
+          "frequencia": 12,
+          "percentual": 50.0
+        },
+        {
+          "valor": "Estoque",
+          "frequencia": 5,
+          "percentual": 20.83
+        },
+        {
+          "valor": "Frete",
+          "frequencia": 2,
+          "percentual": 8.33
+        },
+        {
+          "valor": "Marketing",
+          "frequencia": 1,
+          "percentual": 4.17
+        },
+        {
+          "valor": "Aluguel",
+          "frequencia": 1,
+          "percentual": 4.17
+        }
+      ],
+      "dados_prontos_para_graficos": {
+        "receita_diaria": [
+          325.5,
+          149.0,
+          450.22,
+          1500.27,
+          580.0,
+          616.06,
+          820.06,
+          721.16,
+          410.0,
+          812.0,
+          266.0,
+          980.0
+        ],
+        "despesa_diaria": [
+          120.3,
+          880.7,
+          642.5,
+          900.0,
+          230.5,
+          4240.0,
+          910.4,
+          260.89,
+          95.44,
+          310.25,
+          89.0,
+          350.0
+        ],
+        "lucro_diario": [
+          205.2,
+          -731.7,
+          -192.28,
+          600.27,
+          349.5,
+          -3623.94,
+          -90.34,
+          460.27,
+          314.56,
+          501.75,
+          177.0,
+          630.0
+        ],
+        "vendas_qtd_diaria": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "normas_e_legislacao_nota": "Os resultados devem ser utilizados respeitando privacidade, finalidade dos dados, transparência analítica e normas vigentes aplicáveis ao contexto do negócio."
+    }
+  }
+}
